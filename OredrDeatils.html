@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order History - Lorry Load Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #header nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #header a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        #header a:hover {
+            background-color: #555;
+        }
+
+        #order-history-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .order {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+            margin-bottom: 10px;
+        }
+
+        .order h3 {
+            margin-bottom: 5px;
+        }
+
+        .order p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="header">
+            <nav>
+                <a href="Availabilty.html">Availability</a>
+                <a href="Register.html">Register Vehicle</a>
+                <a href="ContactUs.html">Contact Us</a>
+                <a href="OrderHistory.html">Order History</a>
+            </nav>
+        </div>
+    </header>
+
+    <div id="order-history-container">
+        <h2>Order History</h2>
+
+        <div class="order">
+            <h3>Order #1</h3>
+            <p>Date: January 1, 2023</p>
+            <p>From: Location A</p>
+            <p>To: Location B</p>
+            <!-- Add more details as needed -->
+        </div>
+
+        <div class="order">
+            <h3>Order #2</h3>
+            <p>Date: February 15, 2023</p>
+            <p>From: Location C</p>
+            <p>To: Location D</p>
+            <!-- Add more details as needed -->
+        </div>
+    </div>
+</body>
+</html>

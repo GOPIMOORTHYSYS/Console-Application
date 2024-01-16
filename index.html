@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorry Carrier Booking</title>
+    <style>
+      
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+    }
+
+    #header nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #header a {
+        text-decoration: none;
+        color: #fff;
+        padding: 10px;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    #header a:hover {
+        background-color: #555;
+    }
+
+    #availabilty button,
+    #demo button {
+        cursor: pointer;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 4px;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    #availabilty button:hover,
+    #demo button:hover {
+        background-color: #45a049;
+    }
+</style>
+
+    </style>
+</head>
+<body>
+    <header>
+   <div id="header">
+        <nav>
+        <a href="Availabilty.html">Availabilty</a>
+        <a href="Register.html">Register Vechile</a>
+        <a href="OredrDeatils.html">Accepet Order</a>
+        <a href="ContactUs.html">Contact Us</a>
+        
+        
+    </nav>
+</div>
+   </header>
+   <div id="availabilty">
+    <button type="submit" onclick="Availabilty()">Availabilty Vechile</button>
+</div>
+<div id="demo">
+    <button type="submit" onclick="loadPage()">Register Vechile</button>
+</div>
+   <!-- <div id="demo">
+       <h1>ajax HttpRequestXML</h1>
+       <button type="submit" onclick="loadPage()">Click Here</button>
+   </div> -->
+   <script>
+    function Availabilty(){
+        var xmlObject1=new XMLHttpRequest();
+        xmlObject1.onload=function(){
+            document.getElementById("availabilty").innerHTML=this.responseText;
+        }
+        xmlObject1.open("GET","Availabilty.html",true);
+        xmlObject1.send();
+    }
+    function loadPage(){
+        Availabilty();
+        var xmlObject=new XMLHttpRequest();
+        xmlObject.onload=function(){
+            document.getElementById("demo").innerHTML=this.responseText;
+        }
+        xmlObject.open("GET","Register.html",true);
+        xmlObject.send();
+    }
+ //   Availabilty();
+   </script>
+</body>
+</html>
